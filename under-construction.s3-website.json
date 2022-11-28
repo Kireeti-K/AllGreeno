@@ -1,0 +1,14 @@
+{
+   "index": "index.html",
+   "region": "ap-south-1",
+   "uploadDir": "under-construction",
+   "prefix": "",
+   "exclude": [],
+   "corsConfiguration": [],
+   "enableCloudfront": false,
+   "retries": 20,
+   "domain": "allgreeno.com",
+   "configFile": "under-construction.s3-website.json",
+   "redirectall": "",
+   "json": true
+}

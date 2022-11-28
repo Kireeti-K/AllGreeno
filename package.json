@@ -1,0 +1,19 @@
+{
+  "name": "allgreeno",
+  "version": "1.0.0",
+  "description": "Website for AllGreeno",
+  "main": "main-site/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kireeti-K/AllGreeno.git"
+  },
+  "author": "kireeti93@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kireeti-K/AllGreeno/issues"
+  },
+  "homepage": "https://github.com/Kireeti-K/AllGreeno#readme"
+}
