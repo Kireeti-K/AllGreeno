@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Kireeti-K/AllGreeno/issues"
   },
-  "homepage": "https://github.com/Kireeti-K/AllGreeno#readme"
+  "homepage": "https://github.com/Kireeti-K/AllGreeno#readme",
+  "dependencies": {
+    "s3-website": "^3.3.1"
+  }
 }
