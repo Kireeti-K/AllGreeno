@@ -50,7 +50,7 @@ windows.on('scroll', function() {
     
 // scrollToTop
 $.scrollUp({
-	scrollName: 'scrollUp', // Element ID
+	scrollName: 'scrollUp-Greeno', // Element ID
 	topDistance: '300', // Distance from top before showing element (px)
 	topSpeed: 300, // Speed back to top (ms)
 	animation: 'fade', // Fade, slide, none

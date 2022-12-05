@@ -264,7 +264,7 @@ label {
 .f-left{
     float:left;
 }
-#scrollUp {
+#scrollUp-Greeno {
 	background:#FF06B7;
 	height: 48px;
 	width: 48px;
@@ -278,7 +278,7 @@ label {
     border:1px solid #FF06B7;
     transition: 0.04s;
 }
-#scrollUp:hover {
+#scrollUp-Greeno:hover {
     border:1px solid #AB46D2;
     background:#AB46D2;
     transition: 0.04s;
