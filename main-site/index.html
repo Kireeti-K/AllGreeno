@@ -83,6 +83,7 @@
                                         </ul> -->
                                     </li>
                                     <li class=""><a href="about-1.html">Why?</a>
+                                    <li class=""><a href="media/greeno-whitepaper.pdf" target="_blank">Whitepaper</a>
                                     </li>
                                     <!-- <li class="resulta"><a href="about.html">About us</a></li> -->
                                     <!-- <li class="menu-item-has-children"><a href="index.html#">Pages</a>
@@ -116,7 +117,7 @@
         </div>
     </header>
     <!-- End header area -->
-    <main>
+    <main id="app">
         <!-- Start intro area -->
         <div class="intro-area intro-area-2">
             <div class="bg-wrapper">
@@ -212,9 +213,9 @@
                     <div class="col-xl-12 col-lg-12 col-md-12">
                         <div class="brand-content">
                             <div class="brand-carousel owl-carousel">
-								<div class="single-brand-item">
+								<!-- <div class="single-brand-item">
 									<a href="index.html#"><img src="img/brand/1.png" alt=""></a>
-								</div>
+								</div> -->
 								<div class="single-brand-item">
 									<a href="index.html#"><img src="img/brand/2.png" alt=""></a>
 								</div>
@@ -407,9 +408,9 @@ several other cryptocurriencies use to generate new coins.
                                     </div>
                                     <div class="main-wel">
                                         <div class="wel-content">
-                                            <h4>Metaverse Blockchain</h4>
+                                            <h4>Utility Token</h4>
                                             <p>
-                                                A metaverse blockchain is a type of distributed ledger that can be used to track ownership of digital assets in a virtual world.
+                                                A Utility token is a crypto currency on a smart contract block chain that serves a specific function in a crypto project's ecosystem. Unlike crypto’s like Bitcoin, utility tokens designed to be a real-world medium of exchange.
                                             </p>
                                         </div>
                                     </div>
@@ -453,15 +454,15 @@ several other cryptocurriencies use to generate new coins.
                                     <tr>
                                       <td>Initial Supply</td>
                                       <td>:</td>
-                                      <td>100 Billion</td>
+                                      <td>10 Billion</td>
                                     </tr>
                                     <tr>
                                       <td>Liquidity</td>
                                       <td>:</td>
-                                      <td>500 BNB</td>
+                                      <td>50000 (In Phases)</td>
                                     </tr>
                                     <tr>
-                                      <td>Initial Price in BNB</td>
+                                      <td>Initial Price in Matic</td>
                                       <td>:</td>
                                       <td>N/A</td>
                                     </tr>
@@ -501,7 +502,7 @@ several other cryptocurriencies use to generate new coins.
                                     <tr>
                                       <td>Network</td>
                                       <td>:</td>
-                                      <td>Binance Smart Chain ( BSC )</td>
+                                      <td>Polygon ( Matic )</td>
                                     </tr>
                                     <tr>
                                       <td>Token Ticker</td>
@@ -533,7 +534,7 @@ several other cryptocurriencies use to generate new coins.
                                   <tr>
                                     <td>Consensus</td>
                                     <td>:</td>
-                                    <td>PoA (Proof of Activity)</td>
+                                    <td>PoS (Proof of Stake)</td>
                                   </tr>
                                   <tr>
                                     <td>Performance</td>
@@ -548,7 +549,7 @@ several other cryptocurriencies use to generate new coins.
                                   <tr>
                                     <td>Crosschain</td>
                                     <td>:</td>
-                                    <td>Supported</td>
+                                    <td>Not Supported</td>
                                   </tr>
                                   <tr>
                                     <td>Token Contract</td>
@@ -563,7 +564,7 @@ several other cryptocurriencies use to generate new coins.
                                   <tr>
                                     <td>Smart Contract Type</td>
                                     <td>:</td>
-                                    <td>ERC20 & BSC20</td>
+                                    <td>MRC20</td>
                                   </tr>
                                 </table>
                             </div>
@@ -850,18 +851,15 @@ several other cryptocurriencies use to generate new coins.
                            <!-- Start Nav tabs -->
                             <ul class="nav faq-tab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active show" href="index.html#tab-1" role="tab" data-toggle="tab">
+                                    <a class="nav-link active show" id="tab1-button" href="index.html#tab-1" role="tab" data-toggle="tab"
+                                        @click="tab1Clicked">
                                         <span class="cha-title">General Questions</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.html#tab-2" role="tab" data-toggle="tab">
+                                    <a class="nav-link" id="tab2-button" href="index.html#tab-2" role="tab" data-toggle="tab"
+                                        @click="tab2Clicked">
                                         <span class="cha-title">Token Sale</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html#tab-3" role="tab" data-toggle="tab">
-                                        <span class="cha-title">Campaingns & Rewards</span>
                                     </a>
                                 </li>
                             </ul>
@@ -870,7 +868,7 @@ several other cryptocurriencies use to generate new coins.
                     <div class="col-xl-8 col-lg-8 col-md-8">
 						<div class="tab-content">
 						    <!--Start Tab Content -->
-							<div role="tabpanel" class="tab-pane fade in active show" id="tab-1">
+							<div role="tabpanel" class="tab-pane fade in active show" v-show="showTab1" id="tab-1">
                                 <!-- End Nav tabs -->
                                 <div class="company-faq-left">
                                     <div class="faq_inner">
@@ -952,7 +950,7 @@ several other cryptocurriencies use to generate new coins.
                                 </div>
                             </div>
                             <!--Start Tab Content -->
-							<div role="tabpanel" class="tab-pane fade" id="tab-2">
+							<div role="tabpanel" class="tab-pane fade in active show" v-show="showTab2" id="tab-2">
                                 <!-- End Nav tabs -->
                                 <div class="company-faq-left">
                                     <div class="faq_inner">
@@ -961,14 +959,14 @@ several other cryptocurriencies use to generate new coins.
                                               <div class="card-header white-bg" id="headingSix">
                                                 <h4 class="faq-top-text">
                                                   <button class="faq-accordion-btn" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                                                    1. How can purchase presale token from ICO? 
+                                                    1. How many IDOs can I join at the same time?
                                                   </button>
                                                 </h4>
                                               </div>
 
                                               <div id="collapseSix" class="collapse show " aria-labelledby="headingSix" data-parent="#accordion_2">
                                                 <div class="card-body">
-                                                    When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection of text within a single line, the amount of words is roughly being .
+                                                    You can join as many IDOs as you like at once, but there will be a limit to eliminate Whales and sharks.
                                                 </div>
                                               </div>
                                             </div>
@@ -976,13 +974,13 @@ several other cryptocurriencies use to generate new coins.
                                               <div class="card-header white-bg" id="headingSeven">
                                                 <h4 class="faq-top-text">
                                                   <button class="faq-accordion-btn collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                                    2. Which plateform this crypto token?
+                                                    2. Any KYC needed? Do I have to register for each IDO?
                                                   </button>
                                                 </h4>
                                               </div>
                                               <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion_2">
                                                 <div class="card-body">
-                                                    When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing
+                                                    No, you don't need to register for each IDO. You just need to register once by connecting you’re to participate in all the upcoming IDO projects. There is no KYC required.
                                                 </div>
                                               </div>
                                             </div>
@@ -990,13 +988,13 @@ several other cryptocurriencies use to generate new coins.
                                               <div class="card-header white-bg" id="headingEight">
                                                 <h4 class="faq-top-text">
                                                   <button class="faq-accordion-btn collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                                    3. How much time release ending ico?
+                                                    3. How do I find the token address for the project I just invested in?
                                                   </button>
                                                 </h4>
                                               </div>
                                               <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion_2">
                                                 <div class="card-body">
-                                                    When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines.
+                                                    You can find the token contract and other project-related information on the project’s introduction section.
                                                 </div>
                                               </div>
                                             </div>
@@ -1004,13 +1002,13 @@ several other cryptocurriencies use to generate new coins.
                                               <div class="card-header white-bg" id="headingNine">
                                                 <h4 class="faq-top-text">
                                                   <button class="faq-accordion-btn collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                                    4. Is this token certik cirtified?
+                                                    4. When is IDO going to launch?
                                                   </button>
                                                 </h4>
                                               </div>
                                               <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion_2">
                                                 <div class="card-body">
-                                                    When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection of text within a single line, the amount of words is roughly being .selection of text within a single line, the amount of words is roughly being .
+                                                    Greeno IDO will be launched during September 2023.
                                                 </div>
                                               </div>
                                             </div>
@@ -1018,13 +1016,13 @@ several other cryptocurriencies use to generate new coins.
                                               <div class="card-header white-bg" id="headingTen">
                                                 <h4 class="faq-top-text">
                                                   <button class="faq-accordion-btn collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                                                   5. what is crypto curruncy?
+                                                   5. How many days will the IDO be available?
                                                   </button>
                                                 </h4>
                                               </div>
                                               <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion_2">
                                                 <div class="card-body">
-                                                    When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing.
+                                                    Greeno IDO will be available in 2 Phases, each phases will have a time of 3 months.
                                                 </div>
                                               </div>
                                             </div>
@@ -1236,18 +1234,17 @@ several other cryptocurriencies use to generate new coins.
     <!-- End Footer Area -->
 
     <!-- All JS here -->
-
     <!-- modernizr JS -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <!-- bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
-     <!-- owl.carousel js -->
+        <!-- owl.carousel js -->
     <script src="js/owl.carousel.min.js"></script>
     <!-- Poper js -->
     <script src="js/popper.min.js"></script>
-     <!-- Niceselect js -->
+        <!-- Niceselect js -->
     <script src="js/jquery.nice-select.min.js"></script>
     <!-- meanmenu js -->
     <script src="js/jquery.meanmenu.js"></script>
@@ -1257,6 +1254,32 @@ several other cryptocurriencies use to generate new coins.
     <script src="js/plugins.js"></script>
     <!-- main js -->
     <script src="js/main.js"></script>
+
+    <!-- My JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+      const { createApp } = Vue
+    
+      createApp({
+        data() {
+          return {
+            showTab1: true,
+            showTab2: false
+          }
+        },
+        methods: {
+            tab1Clicked(event) {
+                this.showTab2 = false;
+                this.showTab1 = true;
+            },
+            tab2Clicked(event) {
+                this.showTab1 = false;
+                this.showTab2 = true;
+            }
+        }
+      }).mount('#app')
+    </script>
 </body>
 
 </html>
